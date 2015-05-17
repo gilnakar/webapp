@@ -3,7 +3,7 @@ window.addEventListener('load', init, false);
 var options = {
 	done: function (json){
 		console.log(json);
-        var notifications = document.querySelector(".notifications");
+        var notifications = UTILS.qs(".notifications");
         if (json.notification){
             var content = document.createTextNode(json.notification);
             notifications.appendChild(content);
