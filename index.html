@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body role = "application">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -24,8 +24,8 @@
         <div class="layout-wrap">
             <a href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
 
-            <form class="search-box">
-                <input type="search" name="q" placeholder="search">
+            <form class="search-box" method="get" action="http://www.google.com" role="search">
+                <input type="search" name="q" placeholder="search" >
             </form>
         </div>
     </header>
@@ -40,6 +40,9 @@
                 <div class="menu">
                     <div class="menu-caption">
                         <p>Choose QS report</p>
+                        <div class="arrow">
+                            <img src="img/arrow.png" alt="arrow">
+                        </div>
                     </div>
 
                     <ul class="action-list">
@@ -58,6 +61,9 @@
                 <div class="menu">
                     <div class="menu-caption">
                         <p>Choose dashboard</p>
+                        <div class="arrow">
+                            <img src="img/arrow.png" alt="arrow">
+                        </div>
                     </div>
 
                     <ul class="action-list">
@@ -76,6 +82,9 @@
                 <div class="menu">
                     <div class="menu-caption">
                         <p>Choose guide</p>
+                        <div class="arrow">
+                            <img src="img/arrow.png" alt="arrow">
+                        </div>
                     </div>
 
                     <ul class="action-list">
@@ -89,32 +98,100 @@
             </div>
         </nav>
 
+<!-- 
+=====================================================================================================================
+TABS SECTION
+=====================================================================================================================
+ -->
+
         <section class="tabs clearfix">
-            <ul>
-                <li><a href="#quick-reports">Quick Reports</a></li>
-                <li><a href="#my-folders">My Folders</a></li>
-                <li><a href="#my-team-folders">My Team Folders</a></li>
-                <li><a href="#public-folders">Public Folders</a></li>
+            <ul id="tablist" class="tablist justify" role="tablist">
+                <li>
+                    <a href="#quick-reports" class="tab tab1">Quick Reports</a>
+                </li>
+                <li>
+                    <a href="#my-folders" class="tab tab2">My Folders</a>
+                </li>
+                <li>
+                    <a href="#my-team-folders" class="tab tab3" >My Team Folders</a>
+                </li>
+                <li>
+                    <a href="#public-folders" class="tab tab4" >Public Folders</a>
+                </li>
             </ul>
 
-            <div id="quick-reports">
-                <iframe src="http://netcraft.co.il" width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                    <p>Your browser does not support iframes.</p>
-                </iframe>
-                <p> www.netcraft.co.il </p>
+            <div id="quick-reports" class="tab-panel">
+                <div class="clearfix">
+                    <a class="form-settings" tabindex="0">
+                        <img class="form-settings-img" src="img/settings.png">
+                    </a>
+                </div>
 
+                <div id="form1" class="form-wrap visible-form">
+                    <form class="input-site">
+                        <fieldset class="report-01">
+                            <legend>Report 01:</legend>
+                                <div class="form-group">
+                                    <label for="siteName01">Name</label>
+                                    <input type="text" name="siteName01" id="siteName01" placeholder="Site name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="siteUrl01">URL</label>
+                                    <input type="url" name="siteUrl01" id="siteUrl01" placeholder="Site URL">
+                                </div>
+                        </fieldset>
+
+                        <fieldset class="report-02">
+                            <legend>Report 02:</legend>
+                                <div class="form-group">
+                                    <label for="siteName02">Name</label>
+                                    <input type="text" name="siteName02" id="siteName02" placeholder="Site name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="siteUrl02">URL</label>
+                                    <input type="url" name="siteUrl02" id="siteUrl02" placeholder="Site URL">
+                                </div>
+                        </fieldset>
+
+                        <fieldset class="report-03">
+                            <legend>Report 03:</legend>
+                                <div class="form-group">
+                                    <label for="siteName03">Name</label>
+                                    <input type="text" name="siteName03" id="siteName03" placeholder="Site name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="siteUrl03">URL</label>
+                                    <input type="url" name="siteUrl03" id="siteUrl03" placeholder="Site URL">
+                                </div>
+                        </fieldset>
+
+                        <div class='form-butons'>
+                            <input type="submit" name="submit" value="save" role="button">
+                            <a class='cancel'>Cancel</a>
+                        </div>
+                    </form>
+
+                </div>
+                
+            </div >
+
+            <div id="my-folders" class="tab-panel">2
             </div>
 
-            <div id="my-folders">2
+            <div id="my-team-folders" class="tab-panel">3
             </div>
 
-            <div id="my-team-folders">3
-            </div>
+            <div id="public-folders" class="tab-panel">
 
-            <div id="public-folders">4
+                
+                <div class="iframe-wrap">
+                        <iframe src="http://netcraft.co.il"></iframe>
+                </div>
+                
             </div>
         </section>
     </section>
+
 
 
 
