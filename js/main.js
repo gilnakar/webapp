@@ -1,3 +1,27 @@
+
+
+
+		var cancel = UTILS.qs('.cancel');
+		console.log(cancel);
+
+		UTILS.addEvent(cancel, 'click', function(e) {
+			var form = UTILS.qs('#form1');
+			form.className = "hidden";
+			
+			
+			});
+		;
+		
+
+
+
+
+
+
+/*******************************************/
+/*ajax notifications from JSON*/
+/*******************************************/
+
 window.addEventListener('load', init, false);
 
 var options = {
