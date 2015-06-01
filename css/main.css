@@ -305,7 +305,7 @@ nav{
     text-align: left;
     background-color:#eeeeee; 
     border-bottom: 1px gray solid ;
-    display: none;
+    
     position: relative;
     z-index: 100;
 }
@@ -317,16 +317,20 @@ nav{
     color: #444;
 }
 
-.menu:hover .action-list>li{
+/*.menu:hover .action-list>li{
     display: block;
     cursor: pointer;
+}*/
+
+.rotate {
+    transform: rotate(-180deg);
+    /*transform: rotate(180deg);*/
+    transition: .3s;
 }
 
-.menu:hover .arrow img{
-    
+.rotate-reset {
     transform: rotate(0deg);
-    transition: transform 0.4s;
-    transform: rotate(180deg);
+    transition: .3s;
 }
 
 .action-list>li:hover{
@@ -422,15 +426,6 @@ nav{
     padding:20px;
 }
 
-.active-panel {
-    display: block;
-}
-
-/*.tablist > .active-tab, .tab:focus {
-    background: lightgrey!important;
-    color: black;
-}*/
-
 
 
 .tabs>ul li a:active, 
@@ -443,10 +438,10 @@ nav{
 
 
 
-.tabs div:target  {
+/*.tabs div:target  {
     display:block;
 
-}
+}*/
 
     
 /*******************************************/
