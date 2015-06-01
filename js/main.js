@@ -10,11 +10,17 @@ $(function () {
     $(".nav-section").hover(
 		function () {
 		    $(this).find(".action-list").slideDown();
-		    $(this).find(".arrow").toggleClass('rotate');
+		    $(this).find(".arrow").removeClass('rotate-reset');
+		    $(this).find(".arrow").addClass('rotate');
+		    
+
 		},
 		function () {
 		    $(this).find(".action-list").slideUp();
-		    $(this).find(".arrow").toggleClass('rotate-reset');
+		    $(this).find(".arrow").removeClass('rotate');
+		    $(this).find(".arrow").addClass('rotate-reset');
+		    
+		    
 	});
 
 /*Tabs Menu*/	

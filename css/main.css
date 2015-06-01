@@ -300,6 +300,10 @@ nav{
     position: relative;
     z-index: 100;
 }
+.action-list{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .4);
+
+}
 
 .action-list>li{
     text-align: left;
@@ -438,10 +442,7 @@ nav{
 
 
 
-/*.tabs div:target  {
-    display:block;
 
-}*/
 
     
 /*******************************************/
